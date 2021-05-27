@@ -18,10 +18,14 @@
 - GCP
 - Firebase Hosting
 
+## Rules (for this format):
+- Make it work.
+- Then make it more appealing (aka. maybe good looking).
+
 ### TODOs:
 #### 27.05.2021
 
-- create github repo
+- create github repo ✅
 - start with basic vue project
 - customize project
 - layout basic groundwork

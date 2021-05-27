@@ -1,24 +1,27 @@
-# idea-app
+# IDEA App (Prototype)
 
-## Project setup
-```
-npm install
-```
+## Features:
+- Keep track of all your ideas
+- Be able to tag your ideas
+- Be able to group ideas based on tags / themes
+- Deploy with firebase hosting
+- Create a login screen for the use of multiple accounts
+- Use OAuth / <a href="https://auth0.com/">auth0</a> (?)
+- Transfer all of the prototype to a flutter app
+- Make code public on github.com
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Tools:
+- Vue.js
+- Node.js
+- TypeScript (Backend)
+- Docker
+- GCP
+- Firebase Hosting
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### TODOs:
+#### 27.05.2021
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- create github repo
+- start with basic vue project
+- customize project
+- layout basic groundwork

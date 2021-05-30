@@ -1,19 +1,17 @@
 <template>
-  <div id="app">
-    <AppBar/>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-main>
+      <AppBar/>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 import AppBar from './components/AppBar'
 
 export default {
+  name: 'App',
   components: {
     AppBar
   },
@@ -43,5 +41,10 @@ export default {
       color: #42b983;
     }
   }
+}
+@import './assets/css/generalStyle.css';
+.appStyle{
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 </style>

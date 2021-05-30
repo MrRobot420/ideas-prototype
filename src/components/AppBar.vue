@@ -1,34 +1,29 @@
 <template>
-  <v-app>
+  <v-container fluid>
     <v-app-bar
-        app
-        color="primary"
-        dark
+      color="primary"
+      light
+      height="60px"
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
+    <div class="d-flex align-center">
+      <v-img
+        contain
+        alt="Lightbulb"
+        src="https://cdn3.mindmeister.com/assets/library/landing_pages/idea-management-89ffd20b9de3caaa42c7fa0bab176214980c20825556bbc7d3be3ca4b5256b10.svg"
+        height="50px"
+        width="50px"
+      ></v-img>
+    </div>
+    <v-spacer></v-spacer>
+    <div class="d-flex align-center">
+      <h1>Your ideas</h1>
+    </div>
+    <v-spacer></v-spacer>
+    <div class="d-flex align-center">
       <v-btn class="custom primary--text">Login<v-icon right>mdi-login</v-icon></v-btn>
+    </div>
     </v-app-bar>
-  </v-app>
+  </v-container>
 </template>
 
 <script>

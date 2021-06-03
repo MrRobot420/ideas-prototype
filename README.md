@@ -26,6 +26,13 @@
 #### 27.05.2021
 
 - create github repo ✅
-- start with basic vue project
-- customize project
-- layout basic groundwork
+- start with basic vue project ✅
+- customize project ✅
+- layout basic groundwork ✅
+
+
+#### 03.06.2021
+
+- create side drawer
+- router links to pages
+- create empty dummy pages

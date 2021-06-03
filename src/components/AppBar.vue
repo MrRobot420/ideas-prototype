@@ -6,6 +6,10 @@
       height="60px"
     >
     <div class="d-flex align-center">
+      <v-btn class="primary grey--text text--darken-2" outlined @click="toggleDrawer()">
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
+      <v-spacer></v-spacer>
       <v-img
         contain
         alt="Lightbulb"
@@ -28,7 +32,16 @@
 
 <script>
 export default {
-
+  name: 'AppBar',
+  components: {},
+  data: () => ({
+    
+  }),
+  methods: {
+    toggleDrawer() {
+      this.$emit('drawerClicked')
+    }
+  }
 }
 </script>
 

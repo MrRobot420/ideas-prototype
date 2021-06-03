@@ -1,6 +1,9 @@
 <template>
+<v-app>
+<!-- !!! v-model has to be set! - v-model should also not mutate the prop directly. -->
     <v-navigation-drawer
-        v-if="drawerIsVisible"
+        :v-if="drawerIsVisible"
+        v-model="drawerSetPoint"
         absolute
         temporary
     >
@@ -32,6 +35,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+</v-app>
 </template>
 
 <script>
@@ -40,6 +44,7 @@ export default {
     props: ['isVisible'],
     data: () => ({
         drawerIsVisible: true,
+        drawerSetPoint: true,
         items: [
             { title: "Create Website", tag: "coding", effort: "medium", id: "ansiASh9823" },
             { title: "Sell old stuff", tag: "selloff", effort: "easy", id: "OAhd98ABaas" },
@@ -47,9 +52,17 @@ export default {
         ]
     }),
     created() {
-        console.log(this.drawerIsVisible)
+        // console.log(this.drawerIsVisible)
         this.drawerIsVisible = this.isVisible
-        console.log(this.drawerIsVisible)
+        this.drawerSetPoint = this.isVisible
+    },
+    watch: {
+        isVisible(val) {
+            console.log(val);
+            this.drawerIsVisible = val
+            this.drawerSetPoint = val
+            console.log('TEST: ', this.drawerIsVisible)
+        }
     }
 }
 </script>

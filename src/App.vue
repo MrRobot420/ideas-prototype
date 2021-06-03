@@ -42,9 +42,9 @@ export default {
     }
   }
 }
-@import './assets/css/generalStyle.css';
-.appStyle{
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
+// @import './assets/css/generalStyle.css';
+// .appStyle{
+//     overflow-y: hidden;
+//     overflow-x: hidden;
+// }
 </style>

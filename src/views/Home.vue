@@ -10,11 +10,8 @@
               <p>{{ i.tag }}</p>
               <p>{{ i.effort }}</p>
             </v-card>
-
           </v-col>
-
         </v-row>
-
       </v-layout>
     </v-card>
   </v-app>

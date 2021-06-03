@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <AppBar @drawerClicked="toggleDrawer()"/>
+      <AppBar @drawerClicked="toggleDrawer()"/><br>
       <SideDrawer :isVisible="drawerVisible"/>
       <router-view/>
     </v-main>
@@ -40,7 +40,7 @@ export default {
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;

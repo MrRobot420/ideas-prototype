@@ -1,11 +1,10 @@
 <template>
-<v-app>
 <!-- !!! v-model has to be set! - v-model should also not mutate the prop directly. -->
     <v-navigation-drawer
         :v-if="drawerIsVisible"
         v-model="drawerSetPoint"
         absolute
-        temporary
+        class="primary"
     >
       <v-list-item>
         <v-list-item-avatar>
@@ -35,7 +34,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-</v-app>
 </template>
 
 <script>

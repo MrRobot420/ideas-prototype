@@ -57,6 +57,12 @@ export default {
         this.drawerIsVisible = this.isVisible
         this.drawerSetPoint = this.isVisible
     },
+    methods: {
+        toggleDrawer() {
+            this.drawerIsVisible = !this.drawerIsVisible
+            this.drawerSetPoint = !this.drawerSetPoint
+        }
+    },
     watch: {
         isVisible(val) {
             if (val === true) {

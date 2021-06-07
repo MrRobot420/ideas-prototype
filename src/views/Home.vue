@@ -1,12 +1,17 @@
 <template>
   <v-app>
     <v-card class="pa-6-auto grey" min-width="280px" min-height="720px">
-      <h2>Last ideas:</h2>
+      <h2>Recent ideas</h2>
       <v-layout>
         <v-row>
-          <v-col align="center">
-            <v-card v-for="i in ideas" :key="i.id" class="mx-auto" max-width="300px">
-              <v-card-text>
+          <v-col v-for="i in ideas" :key="i.id" align="center" :cols="$vuetify.breakpoint.xs ? '12' : '3'">
+            <v-card
+              class="mx-auto primary" 
+              :min-height="$vuetify.breakpoint.xs ? 100 : '20vh'"
+              :min-width="$vuetify.breakpoint.xs ? 150 : '20vh'"
+              rounded
+            >
+              <v-card-text class="white--text">
                 <h3>{{ i.title }}</h3>
                 <p>{{ i.tag }}</p>
                 <p>{{ i.effort }}</p>
@@ -29,7 +34,12 @@ export default {
     ideas: [
       { title: "Create Website", tag: "coding", effort: "medium", id: "ansiASh9823" },
       { title: "Sell old stuff", tag: "selloff", effort: "easy", id: "OAhd98ABaas" },
-      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "PAd7asb38as" }
+      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "PAd7asb38as" },
+      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "IAsbd7g2uas" },
+      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ASDopa72bas" },
+      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "Pashsa2bais" },
+      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ABd8g82sada" },
+      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ABs72basdbo" }
     ]
   })
 }

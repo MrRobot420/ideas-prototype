@@ -20,7 +20,7 @@
     </div>
     <v-spacer></v-spacer>
     <div class="d-flex align-center">
-      <h1>Your ideas</h1>
+      <h1>Ideafy</h1>
     </div>
     <v-spacer></v-spacer>
     <div class="d-flex align-center">

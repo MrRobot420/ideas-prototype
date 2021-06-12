@@ -35,9 +35,9 @@ export default {
       { title: "Create Website", tag: "coding", effort: "medium", id: "ansiASh9823" },
       { title: "Sell old stuff", tag: "selloff", effort: "easy", id: "OAhd98ABaas" },
       { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "PAd7asb38as" },
-      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "IAsbd7g2uas" },
-      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ASDopa72bas" },
-      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "Pashsa2bais" },
+      { title: "Spam the spammer", tag: "coding", effort: "medium", id: "IAsbd7g2uas" },
+      { title: "Plan life like 4-Hour workweek suggests", tag: "life", effort: "high", id: "ASDopa72bas" },
+      { title: "Create IDEA WebApp", tag: "coding", effort: "medium", id: "Pashsa2bais" },
       { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ABd8g82sada" },
       { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ABs72basdbo" }
     ]

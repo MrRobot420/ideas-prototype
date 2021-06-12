@@ -23,6 +23,7 @@
           v-for="item in items"
           :key="item.tag"
           link
+          @click="navigateToCategory(item)"
         >
 
           <v-list-item-content>
@@ -61,6 +62,9 @@ export default {
         toggleDrawer() {
             this.drawerIsVisible = !this.drawerIsVisible
             this.drawerSetPoint = !this.drawerSetPoint
+        },
+        navigateToCategory(item) {
+          this.$router.push(`/ideas/${item.tag}`)
         }
     },
     watch: {

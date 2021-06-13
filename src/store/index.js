@@ -13,21 +13,22 @@ export default new Vuex.Store({
     userId: null,
     user: null,
     ideas: [],
+    selectedIdeas: [],
     isMobile: false
   },
   mutations: {  // synchronus
+    setIsMobile(state, payload) {
+      state.isMobile = payload
+    },
     setIdeas(state, payload) {
       state.ideas = payload
+    },
+    setSelectedIdeas(state, payload) {
+      state.selectedIdeas = payload
     },
     addIdea(state, payload) {
       state.ideas.push(payload)
     },
-    getIdeasForTag(state, payload) {
-      return state.ideas.filter(idea => idea.tag === payload)
-    },
-    setIsMobile(state, payload) {
-      state.isMobile = payload
-    }
   },
   actions: {  // asynchronus
     async setIdeas(state) {
@@ -42,13 +43,18 @@ export default new Vuex.Store({
       } else {
         state.commit("setIsMobile", false)
       }
-    }
-
+    },
+    async setIdeasForCategory(state, ideaPayload) {
+      const ideas = await axios.get(url)
+      const ideasForCategory = ideas.data.ideas.filter(idea => idea.category === ideaPayload)
+      state.commit("setSelectedIdeas", ideasForCategory)
+    },
   },
   modules: {
   },
   getters: {
     getIdeas: state => state.ideas,
-    getIsMobile: state => state.isMobile
+    getIsMobile: state => state.isMobile,
+    getSelectedIdeas: state => state.selectedIdeas
   }
 })

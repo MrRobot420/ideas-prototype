@@ -73,7 +73,6 @@ export default {
           const allItems = this.$store.getters.getIdeas
           const categories = []
           const filteredItems = []
-          console.log(allItems);
           allItems.forEach(item => {
             if (categories.includes(item.category)) {
               //

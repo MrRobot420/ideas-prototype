@@ -20,7 +20,8 @@
     </div>
     <v-spacer></v-spacer>
     <div class="d-flex align-center">
-      <h1>Ideafy</h1>
+      <h1 v-if="!isMobile" class="header--text">Flash of Genius</h1>
+      <h2 v-else class="header--text">FOG</h2>
     </div>
     <v-spacer></v-spacer>
     <div class="d-flex align-center">
@@ -37,9 +38,18 @@ export default {
   data: () => ({
     
   }),
+  mounted() {
+    this.$store.dispatch("setMobileState")
+  },
   methods: {
     toggleDrawer() {
       this.$emit('drawerClicked')
+    }
+  },
+  computed: {
+    isMobile() {
+      console.log(this.$store.getters.getIsMobile);
+      return this.$store.getters.getIsMobile
     }
   }
 }

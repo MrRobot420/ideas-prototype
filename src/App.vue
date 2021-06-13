@@ -3,7 +3,6 @@
     <v-main>
       <AppBar @drawerClicked="toggleDrawer()"/><br>
       <SideDrawer ref="sideDrawer" :isVisible="drawerVisible" v-on-clickaway="hideDrawer"/>
-      <FAB/>
       <router-view/>
     </v-main>
   </v-app>
@@ -12,7 +11,6 @@
 <script>
 import AppBar from './components/AppBar'
 import SideDrawer from './components/SideDrawer'
-import FAB from './components/FAB.vue'
 import { directive as onClickaway } from 'vue-clickaway';
 
 export default {
@@ -22,8 +20,7 @@ export default {
   },
   components: {
     AppBar,
-    SideDrawer,
-    FAB
+    SideDrawer
   },
   data: () => ({
     drawerVisible: false

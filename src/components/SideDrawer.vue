@@ -21,13 +21,13 @@
       <v-list dense>
         <v-list-item
           v-for="item in items"
-          :key="item.tag"
+          :key="item.id"
           link
           @click="navigateToCategory(item)"
         >
 
           <v-list-item-content>
-            <v-list-item-title>{{ item.tag }}</v-list-item-title>
+            <v-list-item-title>{{ item.category }}</v-list-item-title>
           </v-list-item-content>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -58,29 +58,44 @@ export default {
         this.drawerIsVisible = this.isVisible
         this.drawerSetPoint = this.isVisible
     },
+    mounted() {
+      const allItems = this.$store.getters.getIdeas
+      const categories = []
+      const filteredItems = []
+      console.log(allItems);
+      allItems.forEach(item => {
+        if (categories.includes(item.category)) {
+          //
+        } else {
+          filteredItems.push(item)
+          categories.push(item.category)
+        }
+      })
+      this.items = filteredItems
+    },
     methods: {
         toggleDrawer() {
             this.drawerIsVisible = !this.drawerIsVisible
             this.drawerSetPoint = !this.drawerSetPoint
         },
         navigateToCategory(item) {
-          this.$router.push(`/ideas/${item.tag}`)
+          this.$router.push(`/ideas/${item.category}`)
         }
     },
     watch: {
-        isVisible(val) {
-            if (val === true) {
-                this.randomBinary = Math.round(Math.random())
-                if (this.randomBinary === 1) {
-                    this.gender = 'men'
-                } else {
-                    this.gender = 'women'
-                }
-                this.imageUrl = `${this.baseUrl}${this.gender}/${Math.round(Math.random() * 100)}${this.dataFormat}`
-            }
-            this.drawerIsVisible = val
-            this.drawerSetPoint = val
+      isVisible(val) {
+        if (val === true) {
+          this.randomBinary = Math.round(Math.random())
+          if (this.randomBinary === 1) {
+              this.gender = 'men'
+          } else {
+              this.gender = 'women'
+          }
+          this.imageUrl = `${this.baseUrl}${this.gender}/${Math.round(Math.random() * 100)}${this.dataFormat}`
         }
+        this.drawerIsVisible = val
+        this.drawerSetPoint = val
+      }
     }
 }
 </script>

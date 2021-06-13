@@ -13,7 +13,8 @@
             >
               <v-card-text class="white--text">
                 <h3>{{ i.title }}</h3>
-                <p>{{ i.tag }}</p>
+                <v-icon>{{ i.icon }}</v-icon>
+                <p>{{ i.category }}</p>
                 <p>{{ i.effort }}</p>
               </v-card-text>
             </v-card>
@@ -29,18 +30,15 @@
 export default {
   name: 'Home',
   components: {
+
   },
-  data: () => ({
-    ideas: [
-      { title: "Create Website", tag: "coding", effort: "medium", id: "ansiASh9823" },
-      { title: "Sell old stuff", tag: "selloff", effort: "easy", id: "OAhd98ABaas" },
-      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "PAd7asb38as" },
-      { title: "Spam the spammer", tag: "coding", effort: "medium", id: "IAsbd7g2uas" },
-      { title: "Plan life like 4-Hour workweek suggests", tag: "life", effort: "high", id: "ASDopa72bas" },
-      { title: "Create IDEA WebApp", tag: "coding", effort: "medium", id: "Pashsa2bais" },
-      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ABd8g82sada" },
-      { title: "Build businessmodel", tag: "enterprise", effort: "high", id: "ABs72basdbo" }
-    ]
-  })
+  mounted() {
+    this.$store.dispatch("setIdeas")
+  },
+  computed: {
+    ideas() {
+      return this.$store.getters.getIdeas
+    }
+  }
 }
 </script>

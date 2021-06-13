@@ -1,7 +1,7 @@
 <template>
-  <v-app>
     <v-card class="pa-6-auto grey" min-width="280px" min-height="720px">
-      <h2>Recent ideas</h2>
+      <h2 class="header--text">Recent ideas</h2>
+      <br>
       <v-layout>
         <v-row>
           <v-col v-for="i in ideas" :key="i.id" align="center" :cols="$vuetify.breakpoint.xs ? '12' : '3'">
@@ -21,16 +21,17 @@
           </v-col>
         </v-row>
       </v-layout>
+      <FAB/>
     </v-card>
-  </v-app>
 </template>
 
 <script>
+import FAB from '../components/FAB.vue'
 
 export default {
   name: 'Home',
   components: {
-
+    FAB
   },
   mounted() {
     this.$store.dispatch("setIdeas")

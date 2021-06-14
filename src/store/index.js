@@ -5,7 +5,7 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 // const url = "http://localhost:5000/api/ideas"
-const url = "https://67abb0424b58.ngrok.io/api/ideas"
+const url = "https://154bd0dfc4d1.ngrok.io/api/ideas"
 
 export default new Vuex.Store({
   state: {

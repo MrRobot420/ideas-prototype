@@ -33,6 +33,40 @@
 
 #### 03.06.2021
 
-- create side drawer
-- router links to pages
-- create empty dummy pages
+- create side drawer ✅
+- router links to pages ✅
+- create empty dummy pages ✅
+
+#### 12.06.2021
+- improve click-outside directive ✅
+- improve rendering of FAB ✅
+
+#### 13.06.2021
+
+- use vuex for data storing and fetching ✅
+- access store data in all components ✅
+- find better name ✅
+- make routing display real ideas for the category ✅
+
+
+#### 14.06.2021
+
+- possibility to create new ideas ✅
+- sync ideas with backend
+- store data in firestore
+- fetch data from firestore
+- add FAB to other screens as well ✅
+- create redirect to /home ✅
+
+
+#### future:
+- create login functionality
+- create user sessions
+- create settings page
+- add delete functionality
+- add statistics
+- add share functionality (with other users)
+- come up with payment (abo-) model (maybe 20 Ideas free, extra functions like project tracking, subtask creation per Idea, collaboration, etc.)
+- improve design
+- improve color scheme
+- make it more mobile friendly

@@ -59,19 +59,7 @@ export default {
         this.drawerSetPoint = this.isVisible
     },
     mounted() {
-      const allItems = this.$store.getters.getIdeas
-      const categories = []
-      const filteredItems = []
-      console.log(allItems);
-      allItems.forEach(item => {
-        if (categories.includes(item.category)) {
-          //
-        } else {
-          filteredItems.push(item)
-          categories.push(item.category)
-        }
-      })
-      this.items = filteredItems
+      this.setItems()
     },
     methods: {
         toggleDrawer() {
@@ -80,10 +68,25 @@ export default {
         },
         navigateToCategory(item) {
           this.$router.push(`/ideas/${item.category}`)
+        },
+        setItems() {
+          const allItems = this.$store.getters.getIdeas
+          const categories = []
+          const filteredItems = []
+          allItems.forEach(item => {
+            if (categories.includes(item.category)) {
+              //
+            } else {
+              filteredItems.push(item)
+              categories.push(item.category)
+            }
+          })
+          this.items = filteredItems
         }
     },
     watch: {
       isVisible(val) {
+        this.setItems()
         if (val === true) {
           this.randomBinary = Math.round(Math.random())
           if (this.randomBinary === 1) {

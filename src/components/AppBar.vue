@@ -16,6 +16,7 @@
         src="https://cdn3.mindmeister.com/assets/library/landing_pages/idea-management-89ffd20b9de3caaa42c7fa0bab176214980c20825556bbc7d3be3ca4b5256b10.svg"
         height="50px"
         width="50px"
+        @click="$router.push('/')"
       ></v-img>
     </div>
     <v-spacer></v-spacer>

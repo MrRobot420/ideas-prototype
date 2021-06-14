@@ -1,6 +1,5 @@
 <template>
-      
-      <v-card class="pa-6-auto grey" min-width="280px" min-height="720px">
+    <v-card class="pa-6-auto grey" min-width="280px" min-height="720px">
       <h2 class="header--text">{{headlineText}}</h2>
       <br>
       <v-layout>
@@ -22,12 +21,18 @@
           </v-col>
         </v-row>
       </v-layout>
+      <FAB/>
     </v-card>
 </template>
 
 <script>
+import FAB from '../components/FAB'
+
 export default {
     name: 'Idea',
+    components: {
+      FAB
+    },
     data: () => ({
         headlineText: '',
     }),

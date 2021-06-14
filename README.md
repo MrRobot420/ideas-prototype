@@ -51,7 +51,7 @@
 
 ### 14.06.2021
 
-- possibility to create new ideas
+- possibility to create new ideas ✅
 - sync ideas with backend
 - store data in firestore
 - fetch data from firestore

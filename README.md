@@ -37,11 +37,11 @@
 - router links to pages ✅
 - create empty dummy pages ✅
 
-### 12.06.2021
+#### 12.06.2021
 - improve click-outside directive ✅
 - improve rendering of FAB ✅
 
-### 13.06.2021
+#### 13.06.2021
 
 - use vuex for data storing and fetching ✅
 - access store data in all components ✅
@@ -49,7 +49,7 @@
 - make routing display real ideas for the category ✅
 
 
-### 14.06.2021
+#### 14.06.2021
 
 - possibility to create new ideas ✅
 - sync ideas with backend
@@ -59,7 +59,7 @@
 - create redirect to /home ✅
 
 
-### future:
+#### future:
 - create login functionality
 - create user sessions
 - create settings page

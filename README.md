@@ -55,7 +55,8 @@
 - sync ideas with backend
 - store data in firestore
 - fetch data from firestore
-- create redirect to /home
+- add FAB to other screens as well ✅
+- create redirect to /home ✅
 
 
 ### future:

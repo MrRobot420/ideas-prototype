@@ -21,12 +21,18 @@
           </v-col>
         </v-row>
       </v-layout>
+      <FAB/>
     </v-card>
 </template>
 
 <script>
+import FAB from '../components/FAB'
+
 export default {
     name: 'Idea',
+    components: {
+      FAB
+    },
     data: () => ({
         headlineText: '',
     }),
